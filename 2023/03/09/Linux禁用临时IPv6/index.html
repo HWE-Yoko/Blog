@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://blog.0j.pw/2023/03/05/myfirstblog/"/>
+  <link rel="canonical" href="https://blog.0j.pw/2023/03/09/linux禁用临时ipv6/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,19 +32,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>MyFirstBlog - 零焦.能量-一个嵌入式工程师的折腾日记！</title>
+  <title>Linux禁用临时IPv6 - 零焦.能量-一个嵌入式工程师的折腾日记！</title>
   <meta name="keywords" content="嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux">
   <meta desc name="description" content="一个嵌入式工程师的折腾日记！ - HWE_Yoko - 零焦.能量-一个嵌入式工程师的折腾日记！">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="MyFirstBlog">
-<meta property="og:url" content="https://blog.0j.pw/2023/03/05/MyFirstBlog/index.html">
+<meta property="og:title" content="Linux禁用临时IPv6">
+<meta property="og:url" content="https://blog.0j.pw/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/index.html">
 <meta property="og:site_name" content="零焦.能量-一个嵌入式工程师的折腾日记！">
-<meta property="og:description" content="我的第一篇博客。">
+<meta property="og:description" content="Linux禁用临时IPv6先使用如下命令sudo sysctl -a | grep tempaddr查看如下选项结果是都等于2，如果等于2，直接修改&#x2F;etc&#x2F;sysctl.d&#x2F;10-ipv6-privacy.conf里的net.ipv6.conf.all.use_tempaddr使其等于2，之后重启网卡&#x2F;主机。 12345net.ipv6.conf.all.use_tempaddr &#x3D;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-03-04T20:45:45.000Z">
-<meta property="article:modified_time" content="2023-03-04T20:46:28.679Z">
+<meta property="article:published_time" content="2023-03-09T14:28:14.000Z">
+<meta property="article:modified_time" content="2023-03-09T14:35:27.049Z">
 <meta property="article:author" content="HWE_Yoko">
 <meta property="article:tag" content="嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux">
 <meta name="twitter:card" content="summary">
@@ -1752,7 +1752,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1677966374731),
+    lastupdate: new Date(1678372538381),
     sidebar: {
       for_page: ["blogger","category","music","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2484,7 +2484,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://blog.0j.pw/2023/03/05/MyFirstBlog/">
+  <link itemprop="mainEntityOfPage" href="https://blog.0j.pw/2023/03/09/Linux禁用临时IPv6/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="零焦.能量-一个嵌入式工程师的折腾日记！">
   </span>
@@ -2505,7 +2505,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        MyFirstBlog
+        Linux禁用临时IPv6
       </h1>
       <div class='new-meta-box'>
         
@@ -2521,10 +2521,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-03-05T04:45:45+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-03-09T22:28:14+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2023年3月5日</p>
+    <p>发布于：2023年3月9日</p>
   </a>
 </div>
 
@@ -2535,7 +2535,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：7 字</p>
+      <p>字数：89 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2557,7 +2557,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>
       <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
       
-      <span id="lc-pv" data-title="MyFirstBlog" data-path="/2023/03/05/MyFirstBlog/">
+      <span id="lc-pv" data-title="Linux禁用临时IPv6" data-path="/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/">
         <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span>
       </span>
       
@@ -2579,7 +2579,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="我的第一篇博客。"><a href="#我的第一篇博客。" class="headerlink" title="我的第一篇博客。"></a>我的第一篇博客。</h1>
+    <h2 id="Linux禁用临时IPv6"><a href="#Linux禁用临时IPv6" class="headerlink" title="Linux禁用临时IPv6"></a>Linux禁用临时IPv6</h2><p>先使用如下命令<code>sudo sysctl -a | grep tempaddr</code>查看如下选项结果是都等于2，如果等于2，直接修改<code>/etc/sysctl.d/10-ipv6-privacy.conf</code>里的<code>net.ipv6.conf.all.use_tempaddr</code>使其等于2，之后重启网卡&#x2F;主机。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">net.ipv6.conf.all.use_tempaddr = 0</span><br><span class="line">net.ipv6.conf.default.use_tempaddr = 0</span><br><span class="line">net.ipv6.conf.eth0.use_tempaddr = 0</span><br><span class="line">net.ipv6.conf.lo.use_tempaddr = -1</span><br><span class="line">net.ipv6.conf.wlan0.use_tempaddr = 0</span><br></pre></td></tr></table></figure>
+
   </div>
   
   
@@ -2603,10 +2605,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-05T04:46:28+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-09T22:35:27+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年3月5日</p>
+    <p>更新于：2023年3月9日</p>
   </a>
 </div>
 
@@ -2625,7 +2627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.0j.pw/2023/03/05/MyFirstBlog/&title=MyFirstBlog - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.0j.pw/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/&title=Linux禁用临时IPv6 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
           
           >
           
@@ -2637,7 +2639,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.0j.pw/2023/03/05/MyFirstBlog/&title=MyFirstBlog - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.0j.pw/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/&title=Linux禁用临时IPv6 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
           
           >
           
@@ -2649,7 +2651,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.0j.pw/2023/03/05/MyFirstBlog/&title=MyFirstBlog - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.0j.pw/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/&title=Linux禁用临时IPv6 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
           
           >
           
@@ -2683,9 +2685,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class="prev-next">
       
       
-        <a class='next' href='/2023/03/01/hello-world/'>
-          <p class='title'>Hello World<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
+        <a class='next' href='/2023/03/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/'>
+          <p class='title'>我的第一篇博客<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>我的第一篇博客。</p>
         </a>
       
     </div>
@@ -2701,7 +2703,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/03/05/MyFirstBlog/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2743,7 +2745,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6"><span class="toc-text">Linux禁用临时IPv6</span></a></li></ol>
     </div>
   </section>
 
@@ -3488,7 +3490,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","sameAs":["https://github.com/volantis-x"],"description":"一个嵌入式工程师的折腾日记！"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.0j.pw/","name":"零焦.能量-一个嵌入式工程师的折腾日记！"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.0j.pw/2023/03/05/MyFirstBlog/","name":"MyFirstBlog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","keywords":"嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux","description":"一个嵌入式工程师的折腾日记！","author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","description":"一个嵌入式工程师的折腾日记！"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.0j.pw?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"MyFirstBlog","description":"一个嵌入式工程师的折腾日记！","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.0j.pw/2023/03/05/MyFirstBlog/"},"author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.0j.pw/2023/03/05/MyFirstBlog/","wordCount":0,"datePublished":"2023-03-04T20:45:45.000Z","dateModified":"2023-03-04T20:46:28.679Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","sameAs":["https://github.com/volantis-x"],"description":"一个嵌入式工程师的折腾日记！"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.0j.pw/","name":"零焦.能量-一个嵌入式工程师的折腾日记！"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.0j.pw/2023/03/09/Linux禁用临时IPv6/","name":"Linux禁用临时IPv6"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","keywords":"嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux","description":"一个嵌入式工程师的折腾日记！","author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","description":"一个嵌入式工程师的折腾日记！"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.0j.pw?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Linux禁用临时IPv6","description":"一个嵌入式工程师的折腾日记！","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.0j.pw/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/"},"author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.0j.pw/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/","wordCount":0,"datePublished":"2023-03-09T14:28:14.000Z","dateModified":"2023-03-09T14:35:27.049Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
