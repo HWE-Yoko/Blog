@@ -1750,7 +1750,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1678372538381),
+    lastupdate: new Date(1678372688893),
     sidebar: {
       for_page: ["blogger","category","music","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2536,7 +2536,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        Linux禁用临时IPv6先使用如下命令sudo sysctl -a | grep tempaddr查看如下选项结果是都等于2，如果等于2，直接修改/etc/sysctl.d/10-ipv6-privacy.conf里的net.ipv6.conf.all.use_tempaddr使其等于2，之后重启网卡&#x2F;主机。
+        Linux禁用临时IPv6先使用如下命令sudo sysctl -a | grep tempaddr查看如下选项结果是否等于2，如果等于2，直接修改/etc/sysctl.d/10-ipv6-privacy.conf里的net.ipv6.conf.all.use_tempaddr使其等于2，之后重启网卡&#x2F;主机。
 12345net.ipv6.conf.all.use_tempaddr...
       
     
