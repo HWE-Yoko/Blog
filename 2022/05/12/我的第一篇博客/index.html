@@ -44,7 +44,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-05-12T05:55:00.000Z">
-<meta property="article:modified_time" content="2023-03-19T15:00:38.863Z">
+<meta property="article:modified_time" content="2023-05-27T10:04:44.990Z">
 <meta property="article:author" content="HWE_Yoko">
 <meta property="article:tag" content="嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux">
 <meta name="twitter:card" content="summary">
@@ -1752,7 +1752,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1680098344144),
+    lastupdate: new Date(1685184916938),
     sidebar: {
       for_page: ["blogger","category","music","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2535,7 +2535,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：465 字</p>
+      <p>字数：477 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2588,7 +2588,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h2 id="0x00-缘生">0x00.缘生</h2>
 <p>这要从去年二月份说起了，去年还在上家公司工作，老板突发奇想想搞个网站，我刚好略懂一二，就自告奋勇说我来搞吧，然后就从注册域名什么乱七八糟的开始（本来之前上大学时候就搞过网站，自己爱捣鼓，就想着土味的给女朋友表白&amp;记录自己整一个吧，然后研究HTML自己写了个静态的，注册了个18块一年的中文域名，放在学生资格白嫖的阿里云服务器上。结果国内注册的域名要备案，弄了好几次也没过，直接就算了，还是只能IP地址访问。）<br>
 首先去注册域名，看了好些平台，dynadot、godaddy……这一类的国外域名注册机构，国内就暂时不考虑了，备案比较麻烦。看来看去，选了dynadot平台，注册了“UnionOE.COM-联合光电”的顶级域名（公司是做红外热成像夜视仪这一类产品的）。结果看着看着，想着自己要不也搞一个吧，然后自己也就注册了个域名“Kawaii.icu-Kawaii.I See U&quot;，使用的Typecho架构，rz.sb站主的主题A-My，阿里云也过期了，所以使用的内网穿透访问，非常不稳定，所以运行了半年之后还是关站了。<br>
-现在，我发现了更好的建站方法，使用GitHub托管+Hexo框架+Volantis主题+Waline评论系统。非常稳定，但是国内访问会有点慢，挂梯子🔗可能会好点。</p>
+现在，我发现了更好的建站方法，使用GitHub托管+Hexo框架+Volantis主题+Waline评论系统。非常稳定，但是国内访问会有点慢，挂梯子🔗可能会好点，后面可能会考虑使用CDN加速。</p>
 <hr>
 <h2 id="0x01-缘起">0x01.缘起</h2>
 <p>//待添加……</p>
@@ -2623,10 +2623,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-03-19T23:00:38+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-27T18:04:44+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年3月19日</p>
+    <p>更新于：2023年5月27日</p>
   </a>
 </div>
 
@@ -3513,7 +3513,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","sameAs":["https://github.com/volantis-x"],"description":"零焦能量"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.0j.pw/","name":"零焦.能量-一个嵌入式工程师的折腾日记！"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.0j.pw/2022/05/12/我的第一篇博客/","name":"我的第一篇博客"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","keywords":"嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux","description":"零焦能量","author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","description":"零焦能量"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.0j.pw?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"我的第一篇博客","description":"零焦能量","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.0j.pw/2022/05/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"},"author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.0j.pw/2022/05/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/","wordCount":0,"datePublished":"2022-05-12T05:55:00.000Z","dateModified":"2023-03-19T15:00:38.863Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","sameAs":["https://github.com/volantis-x"],"description":"零焦能量"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.0j.pw/","name":"零焦.能量-一个嵌入式工程师的折腾日记！"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.0j.pw/2022/05/12/我的第一篇博客/","name":"我的第一篇博客"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","keywords":"嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux","description":"零焦能量","author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","description":"零焦能量"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.0j.pw?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"我的第一篇博客","description":"零焦能量","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.0j.pw/2022/05/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"},"author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.0j.pw/2022/05/12/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/","wordCount":0,"datePublished":"2022-05-12T05:55:00.000Z","dateModified":"2023-05-27T10:04:44.990Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
