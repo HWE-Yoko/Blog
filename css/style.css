@@ -8,10 +8,10 @@
   --card: #fff;
 }
 ::-moz-selection {
-  background: rgba(33,150,243,0.2);
+  background: rgba(51,144,255,0.2);
 }
 ::selection {
-  background: rgba(33,150,243,0.2);
+  background: rgba(51,144,255,0.2);
 }
 h1 {
   font-size: 1.5rem;
@@ -227,18 +227,18 @@ table:not([class]) {
   vertical-align: text-top;
 }
 table:not([class]) th {
-  background-color: #f1f1f1;
+  background-color: #efefef;
 }
 table:not([class]) td,
 table:not([class]) th {
   padding: 8px 16px;
-  border: 2px solid #f1f1f1;
+  border: 2px solid #efefef;
   line-height: 1.5;
   font-size: 90%;
 }
 table:not([class]) tr {
   word-break: keep-all;
-  background-color: #fefefe;
+  background-color: #fcfcfc;
   transition: all 0.28s ease;
   -webkit-transition: all 0.28s ease;
   -khtml-transition: all 0.28s ease;
@@ -247,7 +247,7 @@ table:not([class]) tr {
   -ms-transition: all 0.28s ease;
 }
 table:not([class]) tr:hover {
-  background-color: #f1f1f1;
+  background-color: #efefef;
 }
 td,
 th {
@@ -594,7 +594,7 @@ article#tag .all-tags ul li span:before {
   background: var(--color-codeblock);
   font-size: 0.8125rem;
   font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
-  border: 1px solid #ffebcb;
+  border: 1px solid #e5e5e5;
   padding: 16px;
   border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -3402,7 +3402,7 @@ img.lazyload:not(.placeholder).loaded {
     -webkit-border-radius: 4px;
     box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
     -webkit-box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
-    border: 1px solid #e7e7e7;
+    border: 1px solid #e5e5e5;
     visibility: hidden;
     transform: scale(0, 0);
     -webkit-transform: scale(0, 0);
@@ -3929,6 +3929,7 @@ img.lazyload:not(.placeholder).loaded {
   -webkit-border-radius: 2px;
   flex-shrink: 0;
   margin-right: 8px;
+  pointer-events: none;
 }
 .md .checkbox input[type=checkbox]:before,
 .md .checkbox input[type=checkbox]:after {
@@ -5800,9 +5801,9 @@ div.tabs .tab-content .tab-pane > .note:last-child {
 .article kbd {
   border-radius: 4px;
   -webkit-border-radius: 4px;
-  border: 1px solid #d2d2d2;
+  border: 1px solid #d0d0d0;
   border-bottom-width: 2px;
-  background: #fafafa;
+  background: #f9f9f9;
   padding-left: 4px;
   padding-right: 4px;
 }
@@ -5903,7 +5904,7 @@ div.timenode .body >*:last-child {
   margin-bottom: 0.25em;
 }
 div.timenode .body .highlight {
-  border: 1px solid #e4e4e4;
+  border: 1px solid #e2e2e2;
 }
 div.timenode:hover .meta {
   color: var(--color-text);
@@ -6749,17 +6750,17 @@ pre {
   -moz-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
   -ms-transition: all 0.28s ease;
-  background: #ffeed2;
+  background: #e8e8e8;
 }
 .highlight:hover .gutter {
-  background: #ffedd0;
+  background: #e7e7e7;
 }
 .highlight figcaption {
   font-size: 13px;
   position: sticky;
   left: 0;
   padding: 4px 8px 4px 8px;
-  background: #eaeaea;
+  background: #e8e8e8;
   border-top-left-radius: calc(4px - 1px);
   border-top-right-radius: calc(4px - 1px);
 }
@@ -6818,7 +6819,7 @@ pre {
   position: sticky;
   left: 0;
   z-index: 1;
-  background: #e9e9e9;
+  background: #e7e7e7;
 }
 .highlight >table .gutter pre {
   color: var(--color-meta);
@@ -6864,4 +6865,183 @@ pre {
 }
 .iziToast-message {
   word-break: break-all !important;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  :root:not([color-scheme]) {
+    --block-hover: #1c1c1c;
+    --text-p1: #fff;
+    --text-p3: #777;
+    --card: #fff;
+  }
+  :root:not([color-scheme]) fa-solid,
+  :root:not([color-scheme]) fa-regular,
+  :root:not([color-scheme]) fa-duotone,
+  :root:not([color-scheme]) fa-light,
+  :root:not([color-scheme]) fa-thin,
+  :root:not([color-scheme]) fal,
+  :root:not([color-scheme]) fad,
+  :root:not([color-scheme]) fa,
+  :root:not([color-scheme]) svg.iconfont,
+  :root:not([color-scheme]) img,
+  :root:not([color-scheme]) .lazyload {
+    filter: brightness(70%) !important;
+  }
+  :root:not([color-scheme]) .widget.blogger .content .social-wrapper a.social:hover {
+    background: var(--color-card);
+  }
+  :root:not([color-scheme]) .widget >.content ul.entry a .badge,
+  :root:not([color-scheme]) .widget >.content ul.popular-posts a .badge {
+    color: unset !important;
+  }
+  :root:not([color-scheme]) .content {
+    color: var(--color-p);
+  }
+  :root:not([color-scheme]) .widget >.content a {
+    color: var(--color-p) !important;
+  }
+  :root:not([color-scheme]) .widget >.content a:hover {
+    color: var(--color-list-hl) !important;
+  }
+  :root:not([color-scheme]) .note {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) div.tabs ul.nav-tabs li.tab.active a {
+    color: var(--color-p);
+    background: var(--color-card);
+  }
+  :root:not([color-scheme]) kbd {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .cover-wrapper.dock .menu .list-h a:hover,
+  :root:not([color-scheme]) .cover-wrapper.featured .menu .list-h a:hover,
+  :root:not([color-scheme]) .cover-wrapper.focus .menu .list-h a:hover {
+    color: var(--color-text) !important;
+  }
+  :root:not([color-scheme]) .gutter {
+    background: var(--color-card) !important;
+    background-color: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) .highlight figcaption {
+    background-color: #14161a;
+  }
+  :root:not([color-scheme]) .highlight pre .line,
+  :root:not([color-scheme]) .highlight pre .params {
+    color: rgba(158,142,142,0.9);
+  }
+  :root:not([color-scheme]) *:not(.highlight) >table tr {
+    background-color: var(--color-card);
+  }
+  :root:not([color-scheme]) *:not(.highlight) >table th {
+    background: var(--color-site-bg);
+  }
+  :root:not([color-scheme]) *:not(.highlight) table td,
+  :root:not([color-scheme]) *:not(.highlight) table th {
+    border-color: var(--color-site-bg);
+  }
+  :root:not([color-scheme]) *:not(.highlight) >table tr:hover {
+    background: var(--color-codeblock);
+  }
+  :root:not([color-scheme]) .timenode .highlight {
+    border-color: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) blockquote p {
+    color: var(--color-p);
+  }
+  :root:not([color-scheme]) #archive-page .archive .all-tags ul li span {
+    color: var(--color-text);
+    background: #6f6f72;
+  }
+  :root:not([color-scheme]) .btn-copy:hover {
+    background: var(--color-site-body);
+  }
+}
+[color-scheme='dark'] {
+  --block-hover: #1c1c1c;
+  --text-p1: #fff;
+  --text-p3: #777;
+  --card: #fff;
+}
+[color-scheme='dark'] fa-solid,
+[color-scheme='dark'] fa-regular,
+[color-scheme='dark'] fa-duotone,
+[color-scheme='dark'] fa-light,
+[color-scheme='dark'] fa-thin,
+[color-scheme='dark'] fal,
+[color-scheme='dark'] fad,
+[color-scheme='dark'] fa,
+[color-scheme='dark'] svg.iconfont,
+[color-scheme='dark'] img,
+[color-scheme='dark'] .lazyload {
+  filter: brightness(70%) !important;
+}
+[color-scheme='dark'] .widget.blogger .content .social-wrapper a.social:hover {
+  background: var(--color-card);
+}
+[color-scheme='dark'] .widget >.content ul.entry a .badge,
+[color-scheme='dark'] .widget >.content ul.popular-posts a .badge {
+  color: unset !important;
+}
+[color-scheme='dark'] .content {
+  color: var(--color-p);
+}
+[color-scheme='dark'] .widget >.content a {
+  color: var(--color-p) !important;
+}
+[color-scheme='dark'] .widget >.content a:hover {
+  color: var(--color-list-hl) !important;
+}
+[color-scheme='dark'] .note {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] div.tabs ul.nav-tabs li.tab.active a {
+  color: var(--color-p);
+  background: var(--color-card);
+}
+[color-scheme='dark'] kbd {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .cover-wrapper.dock .menu .list-h a:hover,
+[color-scheme='dark'] .cover-wrapper.featured .menu .list-h a:hover,
+[color-scheme='dark'] .cover-wrapper.focus .menu .list-h a:hover {
+  color: var(--color-text) !important;
+}
+[color-scheme='dark'] .gutter {
+  background: var(--color-card) !important;
+  background-color: var(--color-card) !important;
+}
+[color-scheme='dark'] .highlight figcaption {
+  background-color: #14161a;
+}
+[color-scheme='dark'] .highlight pre .line,
+[color-scheme='dark'] .highlight pre .params {
+  color: rgba(158,142,142,0.9);
+}
+[color-scheme='dark'] *:not(.highlight) >table tr {
+  background-color: var(--color-card);
+}
+[color-scheme='dark'] *:not(.highlight) >table th {
+  background: var(--color-site-bg);
+}
+[color-scheme='dark'] *:not(.highlight) table td,
+[color-scheme='dark'] *:not(.highlight) table th {
+  border-color: var(--color-site-bg);
+}
+[color-scheme='dark'] *:not(.highlight) >table tr:hover {
+  background: var(--color-codeblock);
+}
+[color-scheme='dark'] .timenode .highlight {
+  border-color: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] blockquote p {
+  color: var(--color-p);
+}
+[color-scheme='dark'] #archive-page .archive .all-tags ul li span {
+  color: var(--color-text);
+  background: #6f6f72;
+}
+[color-scheme='dark'] .btn-copy:hover {
+  background: var(--color-site-body);
 }
