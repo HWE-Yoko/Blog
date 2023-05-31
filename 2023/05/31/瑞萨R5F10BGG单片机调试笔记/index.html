@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow,noarchive">
-  <link rel="canonical" href="https://blog.0j.pw/archives/2022/08/"/>
+  
+  <link rel="canonical" href="https://blog.0j.pw/2023/05/31/瑞萨r5f10bgg单片机调试笔记/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,17 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2022/8 - 零焦.能量-一个嵌入式工程师的折腾日记！</title>
+  <title>瑞萨R5F10BGG单片机调试笔记 - 零焦.能量-一个嵌入式工程师的折腾日记！</title>
   <meta name="keywords" content="嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux">
   <meta desc name="description" content="零焦能量 - HWE_Yoko - 零焦.能量-一个嵌入式工程师的折腾日记！">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="零焦.能量-一个嵌入式工程师的折腾日记！">
-<meta property="og:url" content="https://blog.0j.pw/archives/2022/08/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="瑞萨R5F10BGG单片机调试笔记">
+<meta property="og:url" content="https://blog.0j.pw/2023/05/31/%E7%91%9E%E8%90%A8R5F10BGG%E5%8D%95%E7%89%87%E6%9C%BA%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/">
 <meta property="og:site_name" content="零焦.能量-一个嵌入式工程师的折腾日记！">
-<meta property="og:description" content="零焦能量">
+<meta property="og:description" content="环境：  IDE:  Renesas CS+ for CC   MCU:  RL78&#x2F;F13 R5F10BGG   FLASHER:  rl78flash    问题描述： 使用CS+ for CC软件配置Timer，TAU0的Channel0配置为Interval timer模式，具体配置如下图：    Generate Code之后 在r_cg_timer_user.c文件里定义并初始化uin">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2023-05-31T10:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-31T15:23:59.319Z">
 <meta property="article:author" content="HWE_Yoko">
 <meta property="article:tag" content="嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux">
 <meta name="twitter:card" content="summary">
@@ -2335,7 +2337,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2538,7 +2540,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  dock' style="display: ;">
+      <div id="none" class='cover-wrapper post dock' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
@@ -2601,22 +2603,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://blog.0j.pw/2022/08/17/Google邮箱发送到163、QQ-邮箱被屏蔽/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://blog.0j.pw/2023/05/31/瑞萨R5F10BGG单片机调试笔记/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="零焦.能量-一个嵌入式工程师的折腾日记！">
   </span>
@@ -2625,63 +2613,246 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="零焦能量">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/08/17/Google%E9%82%AE%E7%AE%B1%E5%8F%91%E9%80%81%E5%88%B0163%E3%80%81QQ-%E9%82%AE%E7%AE%B1%E8%A2%AB%E5%B1%8F%E8%94%BD/"  itemprop="url">
-        Google邮箱发送到163、QQ...邮箱被屏蔽
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      
-        08.17
-昨天在用Gmail和客户联系，给我们公司采购抄送邮件的时候发现Gmail无法发送到公司的邮箱，会出现如下邮件回复，并且邮件没有送达相应邮箱。
+    
+      <h1 class="title" itemprop="name headline">
+        瑞萨R5F10BGG单片机调试笔记
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="" rel="nofollow">
+    <img itemprop="image" src="https://s1.ax1x.com/2022/05/13/OrZZee.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/05/13/OrZZee.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">HWE-Yoko</p>
+  </a>
+</div>
 
-后又测试了QQ邮箱，163邮箱，也发现这个问题，但我的另外一个Gmail又不会出现这种问题，无解。
-暂时不知道怎么解决。
-08.25
-今天又测试了一下，发现是我的这个Google账号注册的时间太短，发送了太多邮件，可能被风险控制了，过两天...
-      
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-31T18:00:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2023年5月31日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：186 字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：1 分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1>环境：</h1>
+<ul>
+<li>IDE:
+<ul>
+<li>Renesas CS+ for CC</li>
+</ul>
+</li>
+<li>MCU:
+<ul>
+<li>RL78/F13 R5F10BGG</li>
+</ul>
+</li>
+<li>FLASHER:
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/msalau/rl78flash">rl78flash</a></li>
+</ul>
+</li>
+</ul>
+<h1>问题描述：</h1>
+<p>使用<code>CS+ for CC</code>软件配置<code>Timer</code>，<code>TAU0</code>的<code>Channel0</code>配置为<code>Interval timer</code>模式，具体配置如下图：</p>
+<p><img src="/img/2023/05/TAU0_Channel0_Conf.png" class="lazyload" data-srcset="/img/2023/05/TAU0_Channel0_Conf.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Channel0_Conf"></p>
+<p> </p>
+<p>Generate Code之后</p>
+<p>在<code>r_cg_timer_user.c</code>文件里定义并初始化<code>uint16_t Timer_Count = 0;</code>,并在<code>Channel0</code>的中断函数<code>r_tau0_channel0_interrupt</code>里添加如下代码：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">R_TAU0_Channel0_Stop();                 <span class="comment">//关闭TAU0_Channel0中断</span></span><br><span class="line">	</span><br><span class="line">Timer_Count ++;</span><br><span class="line"><span class="keyword">if</span>(Timer_Count &gt;= Timer_Count_MAX)</span><br><span class="line">&#123;</span><br><span class="line">	Timer_Count = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">R_TAU0_Channel0_Start();                <span class="comment">//开启TAU0_Channel0中断</span></span><br></pre></td></tr></table></figure>
+<p>在<code>r_cg_userdefine.h</code>文件里定义宏<code>#define Timer_Count_MAX 65000</code>,在<code>r_mian.c</code>中声明<code>extern uint16_t Timer_Count;</code>就可以添加如下<code>Delay_ms</code>函数：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Delay_ms</span><span class="params">(<span class="type">uint16_t</span> num)</span></span><br><span class="line">&#123;</span><br><span class="line">	Timer_Count = <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span>((num - Timer_Count) != <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		NOP( );</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>⚠️ Notice:<br>
+上面代码中的<code>NOP();</code>非常重要，不可省略，省略之后代码会卡死在<code>while((num - Timer_Count) != 0)</code>里面。</p>
+<p>最后我把本次的代码放在下面：<br>
+<a href="/appendix/2023/05/Renesas_Demo.zip">R5F10BGG_Demo</a></p>
+
+  </div>
   
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-08-17T14:14:30+08:00">2022-08-17</time>
-        
-      </div>
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2022/08/17/Google%E9%82%AE%E7%AE%B1%E5%8F%91%E9%80%81%E5%88%B0163%E3%80%81QQ-%E9%82%AE%E7%AE%B1%E8%A2%AB%E5%B1%8F%E8%94%BD/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-31T23:23:59+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2023年5月31日</p>
+  </a>
 </div>
 
-          </div>
         
       
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.0j.pw/2023/05/31/%E7%91%9E%E8%90%A8R5F10BGG%E5%8D%95%E7%89%87%E6%9C%BA%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/&title=瑞萨R5F10BGG单片机调试笔记 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.0j.pw/2023/05/31/%E7%91%9E%E8%90%A8R5F10BGG%E5%8D%95%E7%89%87%E6%9C%BA%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/&title=瑞萨R5F10BGG单片机调试笔记 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.0j.pw/2023/05/31/%E7%91%9E%E8%90%A8R5F10BGG%E5%8D%95%E7%89%87%E6%9C%BA%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/&title=瑞萨R5F10BGG单片机调试笔记 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
-    
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2023/03/29/CloudflareDNS%E8%A7%A3%E6%9E%90%E5%9C%B0%E5%9D%80%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4/'>
+          <p class='title'>CloudflareDNS解析地址批量删除<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>所需环境：
+
+Node.js
+cfcli
+Windows Terminal
+
+操作步骤：
+先使用Node.js环境安装cfcli
+
+
+解析地址是纯数字的：
+
+新建一个文本文档，把后缀改为&quo...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
   
 
 
-	
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2690,149 +2861,52 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://s1.ax1x.com/2022/05/13/OrZZee.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-        
-        
-          <p><span id="jinrishici-sentence">零焦.能量-一个嵌入式工程师的折腾日记！</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/"
-              class="social fa-solid fa-home flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="mailto:HWE.Yoko@gmail.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/HWE-Yoko"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://space.bilibili.com/33793123"
-              class="social fab fa-bilibili flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-
-    
-  
-
-  
-    
-    
-      
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget desktop pjax">
-  
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <div class="webinfo">
-      
-        <div class="webinfo-item">
-          <div>文章数目：</div>
-          <div>9 篇</div>
-        </div>
-      
-
-      
-        <div class="webinfo-item">
-          <div>已运行时间：</div>
-          <div id="webinfo-runtime-count"></div>
-        </div>
-      
-
-
-      
-        <div class="webinfo-item">
-          <div>本站总字数：</div>
-          <div>3.2k 字</div>
-        </div>
-      
-
-      
-
-      
-
-      
-        <div class="webinfo-item">
-          <div>最后活动时间：</div>
-          <div id="last-update-show">2023-05-31 日</div>
-        </div>
-      
-    </div>
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2856,13 +2930,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2871,14 +2946,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -3404,7 +3479,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","sameAs":["https://github.com/volantis-x"],"description":"零焦能量"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.0j.pw/","name":"零焦.能量-一个嵌入式工程师的折腾日记！"}},{"@type":"ListItem","position":2,"item":{"@id":"https://blog.0j.pw/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.0j.pw/archives/2022/","name":"2022年"}},{"@type":"ListItem","position":4,"item":{"@id":"https://blog.0j.pw/archives/2022/8/","name":"8月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","keywords":"嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux","description":"零焦能量","author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","description":"零焦能量"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.0j.pw?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"零焦能量","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","sameAs":["https://github.com/volantis-x"],"description":"零焦能量"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.0j.pw/","name":"零焦.能量-一个嵌入式工程师的折腾日记！"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.0j.pw/2023/05/31/瑞萨R5F10BGG单片机调试笔记/","name":"瑞萨R5F10BGG单片机调试笔记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","keywords":"嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux","description":"零焦能量","author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","description":"零焦能量"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.0j.pw?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"瑞萨R5F10BGG单片机调试笔记","description":"零焦能量","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.0j.pw/2023/05/31/%E7%91%9E%E8%90%A8R5F10BGG%E5%8D%95%E7%89%87%E6%9C%BA%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/"},"author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.0j.pw/2023/05/31/%E7%91%9E%E8%90%A8R5F10BGG%E5%8D%95%E7%89%87%E6%9C%BA%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/","wordCount":0,"datePublished":"2023-05-31T10:00:00.000Z","dateModified":"2023-05-31T15:23:59.319Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
