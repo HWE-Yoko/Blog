@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#5.8.0'>
+    <head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0">
   <meta name="generator" content="Hexo 6.3.0">
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://blog.0j.pw/2023/05/31/瑞萨r5f10bgg单片机调试笔记/"/>
+  <link rel="canonical" href="https://blog.0j.pw/post/656b2c9e/">
   <!-- 渲染优化 -->
-    <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://unpkg.com'>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+      <link rel="dns-prefetch" href="https://unpkg.com">
       <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True" >
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
@@ -27,31 +27,30 @@
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
-    <link rel="shortcut icon" type='image/x-icon' href="https://s1.ax1x.com/2022/05/13/OrZZee.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="https://s1.ax1x.com/2022/05/13/OrZZee.jpg">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="/font/LXGWWenKaiGBScreen.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/font/LXGWWenKaiGBScreen.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>瑞萨R5F10BGG单片机调试笔记 - 零焦.能量-一个嵌入式工程师的折腾日记！</title>
-  <meta name="keywords" content="R5F10BGG,Renesas,Delay_ms,Timer,嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux">
+  <title>大理之行 - 零焦.能量-一个嵌入式工程师的折腾日记！</title>
+  <meta name="keywords" content="旅游,大理,机车,嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux">
   <meta desc name="description" content="零焦能量 - HWE_Yoko - 零焦.能量-一个嵌入式工程师的折腾日记！">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="瑞萨R5F10BGG单片机调试笔记">
-<meta property="og:url" content="https://blog.0j.pw/2023/05/31/%E7%91%9E%E8%90%A8R5F10BGG%E5%8D%95%E7%89%87%E6%9C%BA%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/">
+<meta property="og:title" content="大理之行">
+<meta property="og:url" content="https://blog.0j.pw/post/656b2c9e/">
 <meta property="og:site_name" content="零焦.能量-一个嵌入式工程师的折腾日记！">
-<meta property="og:description" content="环境：  IDE:  Renesas CS+ for CC   MCU:  RL78&#x2F;F13 R5F10BGG   FLASHER:  rl78flash    问题描述： 使用CS+ for CC软件配置Timer，TAU0的Channel0配置为Interval timer模式，具体配置如下图：    Generate Code之后 在r_cg_timer_user.c文件里定义并初始化uin">
+<meta property="og:description" content="下关风，上关花，下关风吹上关花； 苍山雪，洱海月，洱海月照苍山雪。  作为一个云南人，并且从小生长在离大理不远的楚雄，硬是到了二十四的年纪上了班才第一次去了大理，跟我的伙伴们一起骑机车去周末之行（还有一个小姐姐哟）。  （350Km骑了四个半小时 ? ）   （到了大理，准备下高速了）  第一天几个人骑着车去了洱海边，帅是真的帅，惹来好多人围观 ٩(ˊᗜˋ*)و （这个逼算是装成功了） ?  （">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-05-31T10:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-31T15:48:53.489Z">
+<meta property="article:published_time" content="2022-06-19T14:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-19T14:00:00.000Z">
 <meta property="article:author" content="HWE_Yoko">
-<meta property="article:tag" content="R5F10BGG">
-<meta property="article:tag" content="Renesas">
-<meta property="article:tag" content="Delay_ms">
-<meta property="article:tag" content="Timer">
+<meta property="article:tag" content="旅游">
+<meta property="article:tag" content="大理">
+<meta property="article:tag" content="机车">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1895,9 +1894,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
-        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br>
+        <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
 </noscript>
 
@@ -1912,10 +1911,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1685548148278),
+    lastupdate: new Date(1685552252947),
     sidebar: {
-      for_page: ["blogger","category","tagcloud","webinfo"],
-      for_post: ["toc"],
+      for_page: ["blogger","tagcloud","webinfo"],
+      for_post: ["blogger","toc"],
       webinfo: {
         lastupd: {
           enable: true,
@@ -2340,25 +2339,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style="opacity: 0">
+  <div class="container">
+  <div id="wrapper">
+    <div class="nav-sub">
       <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+      <ul class="switcher nav-list-h m-phone" id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;" title="comment"></a></li>
         
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/'>
+        <a class="title flat-box" target="_self" href="/">
           
           
-            <i class='https://s1.ax1x.com/2022/05/13/OrZZee.jpg'></i>
+            <i class="https://s1.ax1x.com/2022/05/13/OrZZee.jpg"></i>
           
           
             零焦.能量
@@ -2366,22 +2365,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </a>
       
 
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
+			<div class="menu navigation">
+				<ul class="nav-list-h m-pc">
           
           
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="主页"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-home fa-fw'></i>主页
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="主页" active-action="action-home">
+                  <i class="fa-solid fa-home fa-fw"></i>主页
                 </a>
                 
               </li>
@@ -2391,14 +2384,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2408,14 +2395,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="好友"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>好友
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="好友" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>好友
                 </a>
                 
               </li>
@@ -2425,14 +2406,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2445,12 +2420,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
+          <input type="text" class="input u-search-input" placeholder="Search...">
         </form>
       </div>
       
 
-			<ul class='switcher nav-list-h m-phone'>
+			<ul class="switcher nav-list-h m-phone">
 				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
 				
@@ -2461,14 +2436,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="主页"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-home fa-fw'></i>主页
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="主页" active-action="action-home">
+                  <i class="fa-solid fa-home fa-fw"></i>主页
                 </a>
                 
               </li>
@@ -2478,14 +2447,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2495,14 +2458,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="好友"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>好友
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="好友" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>好友
                 </a>
                 
               </li>
@@ -2512,14 +2469,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2543,12 +2494,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post dock' style="display: none;">
+      <div id="none" class="cover-wrapper post dock" style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
+  <div class="cover-bg lazyload placeholder" data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
-<div class='cover-body'>
-  <div class='top'>
+<div class="cover-body">
+  <div class="top">
     
     
       <p class="title">零焦.能量</p>
@@ -2557,37 +2508,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="subtitle">一个嵌入式工程师的折腾日记</p>
     
   </div>
-  <div class='bottom'>
-    <div class='menu navigation'>
-      <div class='list-h'>
+  <div class="bottom">
+    <div class="menu navigation">
+      <div class="list-h">
         
           
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1faa9.svg'><p>主页</p>
+            <a href="/" active-action="action-home">
+              <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1faa9.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1faa9.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><p>主页</p>
             </a>
           
-            <a href="/archives/"
-              
-              
-              active-action="action-archives">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg'><p>归档</p>
+            <a href="/archives/" active-action="action-archives">
+              <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><p>归档</p>
             </a>
           
-            <a href="/friends/"
-              
-              
-              active-action="action-friends">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f46c.svg'><p>好友</p>
+            <a href="/friends/" active-action="action-friends">
+              <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f46c.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f46c.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><p>好友</p>
             </a>
           
-            <a href="/about/"
-              
-              
-              active-action="action-about">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1faaa.svg'><p>关于</p>
+            <a href="/about/" active-action="action-about">
+              <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1faaa.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1faaa.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><p>关于</p>
             </a>
           
         
@@ -2605,9 +2544,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://blog.0j.pw/2023/05/31/瑞萨R5F10BGG单片机调试笔记/">
+<div id="l_main" class>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://blog.0j.pw/post/656b2c9e/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="零焦.能量-一个嵌入式工程师的折腾日记！">
   </span>
@@ -2628,14 +2567,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        瑞萨R5F10BGG单片机调试笔记
+        大理之行
       </h1>
-      <div class='new-meta-box'>
+      <div class="new-meta-box">
         
           
             
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="" rel="nofollow">
+<div class="new-meta-item author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class="author" href="/" rel="nofollow">
     <img itemprop="image" src="https://s1.ax1x.com/2022/05/13/OrZZee.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/05/13/OrZZee.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">HWE-Yoko</p>
   </a>
@@ -2644,10 +2583,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-05-31T18:00:00+08:00">
-  <a class='notlink'>
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-06-19T22:00:00+08:00">
+  <a class="notlink">
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2023年5月31日</p>
+    <p>发布于：2022年6月19日</p>
   </a>
 </div>
 
@@ -2656,13 +2595,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：186 字</p>
+      <p>字数：308 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
       <p>时长：1 分钟</p>
     </a>
@@ -2688,43 +2627,56 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1>环境：</h1>
-<ul>
-<li>IDE:
-<ul>
-<li>Renesas CS+ for CC</li>
-</ul>
-</li>
-<li>MCU:
-<ul>
-<li>RL78/F13 R5F10BGG</li>
-</ul>
-</li>
-<li>FLASHER:
-<ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/msalau/rl78flash">rl78flash</a></li>
-</ul>
-</li>
-</ul>
-<h1>问题描述：</h1>
-<p>使用<code>CS+ for CC</code>软件配置<code>Timer</code>，<code>TAU0</code>的<code>Channel0</code>配置为<code>Interval timer</code>模式，具体配置如下图：</p>
-<p><img src="/img/2023/05/TAU0_Channel0_Conf.png" class="lazyload" data-srcset="/img/2023/05/TAU0_Channel0_Conf.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Channel0_Conf"></p>
-<p> </p>
-<p>Generate Code之后</p>
-<p>在<code>r_cg_timer_user.c</code>文件里定义并初始化<code>uint16_t Timer_Count = 0;</code>,并在<code>Channel0</code>的中断函数<code>r_tau0_channel0_interrupt</code>里添加如下代码：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">R_TAU0_Channel0_Stop();                 <span class="comment">//关闭TAU0_Channel0中断</span></span><br><span class="line">	</span><br><span class="line">Timer_Count ++;</span><br><span class="line"><span class="keyword">if</span>(Timer_Count &gt;= Timer_Count_MAX)</span><br><span class="line">&#123;</span><br><span class="line">	Timer_Count = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">R_TAU0_Channel0_Start();                <span class="comment">//开启TAU0_Channel0中断</span></span><br></pre></td></tr></table></figure>
-<p>在<code>r_cg_userdefine.h</code>文件里定义宏<code>#define Timer_Count_MAX 65000</code>,在<code>r_mian.c</code>中声明<code>extern uint16_t Timer_Count;</code>就可以添加如下<code>Delay_ms</code>函数：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">Delay_ms</span><span class="params">(<span class="type">uint16_t</span> num)</span></span><br><span class="line">&#123;</span><br><span class="line">	Timer_Count = <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span>((num - Timer_Count) != <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		NOP( );</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>⚠️ Notice:<br>
-上面代码中的<code>NOP();</code>非常重要，不可省略，省略之后代码会卡死在<code>while((num - Timer_Count) != 0)</code>里面。</p>
-<p>最后我把本次的代码放在下面：<br>
-<a href="/appendix/2023/05/Renesas_Demo.zip">R5F10BGG_Demo</a></p>
+    <blockquote>
+<p>下关风，上关花，下关风吹上关花；<br>
+苍山雪，洱海月，洱海月照苍山雪。</p>
+</blockquote>
+<p>作为一个云南人，并且从小生长在离大理不远的楚雄，硬是到了二十四的年纪上了班才第一次去了大理，跟我的伙伴们一起骑机车去周末之行（还有一个小姐姐哟）。</p>
+<p><img src="https://s1.ax1x.com/2022/07/22/jLX5dg.png" class="lazyload" data-srcset="https://s1.ax1x.com/2022/07/22/jLX5dg.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="导航"><br>
+（350Km骑了四个半小时 ? ）</p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/07/22/jLxwLV.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/07/22/jLxwLV.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="下高速"><br>
+（到了大理，准备下高速了）</p>
+<hr>
+<p>第一天几个人骑着车去了洱海边，帅是真的帅，惹来好多人围观 ٩(ˊᗜˋ*)و （这个逼算是装成功了） ?</p>
+<p><img src="https://s1.ax1x.com/2022/07/22/jLxaMq.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/07/22/jLxaMq.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="苍山00"><br>
+（苍山）</p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/07/22/jLxYGj.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/07/22/jLxYGj.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="苍山01"><br>
+（半截插在云中的苍山）</p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/07/22/jLxtRs.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/07/22/jLxtRs.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="洱海00"><br>
+（洱海边，人不是很多）</p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/07/22/jLxEIe.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/07/22/jLxEIe.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="洱海01"><br>
+（壮阔）</p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/07/22/jLxNzn.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/07/22/jLxNzn.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="帅00"><br>
+（帅不帅 ? ）</p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/07/22/jLxds0.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/07/22/jLxds0.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="帅01"><br>
+（要帅还得是机车啊）</p>
+<hr>
+<p>晚上嘛，逛了逛古城，去酒吧喝了点小酒，把同去的几个人干趴下了 ? （这点小酒量还是有的）</p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/07/22/jLxMsP.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/07/22/jLxMsP.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="大理古城"><br>
+（晚上古城人还是多）</p>
+<hr>
+<p><img src="https://s1.ax1x.com/2022/07/22/jLxkVO.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/07/22/jLxkVO.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="4打啤酒"><br>
+（考虑到明天还要骑车回来，没喝多少，就点了四打啤酒）</p>
+<hr>
+<p>第二天去喜洲古镇那边喝了个咖啡，一路也是好多人拍照，围观，又装到了 ?</p>
+<p><img src="https://s1.ax1x.com/2022/07/22/jLxeGd.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/07/22/jLxeGd.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="喜洲古镇"></p>
+<hr>
+<p>最后放上一张我自己在洱海边拍的照片，本来就不怎么喜欢拍照，随便拍了一张</p>
+<p><img src="https://s1.ax1x.com/2022/07/22/jLxiqK.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/07/22/jLxiqK.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="me"></p>
+<p>Peace!</p>
 
   </div>
   
   
     
-    <div class='footer'>
+    <div class="footer">
        <!-- 参考资料、相关资料等 -->
       
        <!-- 相关文章 -->
@@ -2739,14 +2691,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
 
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-31T23:48:53+08:00">
-  <a class='notlink'>
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-06-19T22:00:00+08:00">
+  <a class="notlink">
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年5月31日</p>
+    <p>更新于：2022年6月19日</p>
   </a>
 </div>
 
@@ -2755,8 +2707,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/R5F10BGG/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>R5F10BGG</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Renesas/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Renesas</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Delay-ms/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Delay_ms</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Timer/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Timer</p></a></div>
-  <span hidden itemprop="keywords">R5F10BGG Renesas Delay_ms Timer</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%97%85%E6%B8%B8/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>旅游</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%A4%A7%E7%90%86/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>大理</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%9C%BA%E8%BD%A6/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>机车</p></a></div>
+  <span hidden itemprop="keywords">旅游 大理 机车</span>
 
 
         
@@ -2767,11 +2719,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.0j.pw/2023/05/31/%E7%91%9E%E8%90%A8R5F10BGG%E5%8D%95%E7%89%87%E6%9C%BA%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/&title=瑞萨R5F10BGG单片机调试笔记 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
-          
-          >
+        <a class="-mob-share-qq" title rel="external nofollow noopener noreferrer" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.0j.pw/post/656b2c9e/&title=大理之行 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary=">
           
             <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2779,11 +2727,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.0j.pw/2023/05/31/%E7%91%9E%E8%90%A8R5F10BGG%E5%8D%95%E7%89%87%E6%9C%BA%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/&title=瑞萨R5F10BGG单片机调试笔记 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
-          
-          >
+        <a class="-mob-share-qzone" title rel="external nofollow noopener noreferrer" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.0j.pw/post/656b2c9e/&title=大理之行 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary=">
           
             <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2791,11 +2735,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.0j.pw/2023/05/31/%E7%91%9E%E8%90%A8R5F10BGG%E5%8D%95%E7%89%87%E6%9C%BA%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/&title=瑞萨R5F10BGG单片机调试笔记 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
-          
-          >
+        <a class="-mob-share-weibo" title rel="external nofollow noopener noreferrer" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.0j.pw/post/656b2c9e/&title=大理之行 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary=">
           
             <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2826,22 +2766,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class="prev" href="/post/8e45c22/">
+          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Google邮箱发送到163、QQ...邮箱被屏蔽</p>
+          <p class="content">08.17
+昨天在用Gmail和客户联系，给我们公司采购抄送邮件的时候发现Gmail无法发送到公司的邮箱，会出现如下邮件回复，并且邮件没有送达相应邮箱。
+
+后又测试了QQ邮箱，163邮箱，也发现...</p>
+        </a>
       
-        <a class='next' href='/2023/03/29/CloudflareDNS%E8%A7%A3%E6%9E%90%E5%9C%B0%E5%9D%80%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4/'>
-          <p class='title'>CloudflareDNS解析地址批量删除<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>所需环境：
-
-Node.js
-cfcli
-Windows Terminal
-
-操作步骤：
-先使用Node.js环境安装cfcli
-
-
-解析地址是纯数字的：
-
-新建一个文本文档，把后缀改为&quo...</p>
+      
+        <a class="next" href="/post/71cfdc59/">
+          <p class="title">STC89C52调试笔记<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">出于一些特殊原因（帮学弟做个课设），需要用到STC89C52，用都用到了，记录一下过程吧。
+串口
+/* UART STC89C52RC Frequency 11.0592MHz * receiv...</p>
         </a>
       
     </div>
@@ -2861,7 +2799,65 @@ Windows Terminal
 
 
 </div>
-<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+<aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
+  
+
+  
+    
+    
+      
+<section class="widget blogger desktop pjax">
+  <div class="content">
+    
+      
+        <a class="avatar flat-box circle" href="/about/">
+          <img no-lazy src="https://s1.ax1x.com/2022/05/13/OrZZee.jpg">
+        </a>
+      
+    
+    
+      <div class="text">
+        
+        
+        
+          <p><span id="jinrishici-sentence">零焦.能量-一个嵌入式工程师的折腾日记！</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/" class="social fa-solid fa-home flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:HWE.Yoko@gmail.com" class="social fa-solid fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/HWE-Yoko" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://space.bilibili.com/33793123" class="social fab fa-bilibili flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+    
   
 
   
@@ -2878,19 +2874,9 @@ Windows Terminal
   
 
 
-  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
-    
-  <header>
-    
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        
-    </div>
-  </section>
+  <div class>
+    <!-- pjax占位 -->
+  </div>
 
   
 
@@ -2898,10 +2884,6 @@ Windows Terminal
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2969,12 +2951,29 @@ Windows Terminal
         </div>
         
   
-  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+  <footer class="footer clearfix" itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
     
       
-        <div class='copyright'>
-        <p><a href="/">Copyright © 2021-2023 Yoko With Volantis</a></p>
+        <br>
+        <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          
+            
+              <a href="https://github.com/HWE-Yoko" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <div class="copyright">
+        <p>[Copyright © 2021-2023 Yoko With <a href="https://volantis.js.org/" target="_blank" rel="external nofollow noopener noreferrer">Volantis</a>]</p>
 
         </div>
       
@@ -3486,7 +3485,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","sameAs":["https://github.com/volantis-x"],"description":"零焦能量"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.0j.pw/","name":"零焦.能量-一个嵌入式工程师的折腾日记！"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.0j.pw/2023/05/31/瑞萨R5F10BGG单片机调试笔记/","name":"瑞萨R5F10BGG单片机调试笔记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","keywords":"嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux","description":"零焦能量","author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","description":"零焦能量"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.0j.pw?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"瑞萨R5F10BGG单片机调试笔记","description":"零焦能量","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.0j.pw/2023/05/31/%E7%91%9E%E8%90%A8R5F10BGG%E5%8D%95%E7%89%87%E6%9C%BA%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/"},"author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.0j.pw/2023/05/31/%E7%91%9E%E8%90%A8R5F10BGG%E5%8D%95%E7%89%87%E6%9C%BA%E8%B0%83%E8%AF%95%E7%AC%94%E8%AE%B0/","wordCount":0,"datePublished":"2023-05-31T10:00:00.000Z","dateModified":"2023-05-31T15:48:53.489Z","keywords":"R5F10BGG,Renesas,Delay_ms,Timer","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","sameAs":["https://github.com/volantis-x"],"description":"零焦能量"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.0j.pw/","name":"零焦.能量-一个嵌入式工程师的折腾日记！"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.0j.pw/post/656b2c9e/","name":"大理之行"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","keywords":"嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux","description":"零焦能量","author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","description":"零焦能量"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.0j.pw?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"大理之行","description":"零焦能量","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.0j.pw/post/656b2c9e/"},"author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.0j.pw/post/656b2c9e/","wordCount":0,"datePublished":"2022-06-19T14:00:00.000Z","dateModified":"2022-06-19T14:00:00.000Z","keywords":"旅游,大理,机车","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

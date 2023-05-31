@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#5.8.0'>
+    <head hexo-theme="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0">
   <meta name="generator" content="Hexo 6.3.0">
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://blog.0j.pw/2023/03/09/linux禁用临时ipv6/"/>
+  <link rel="canonical" href="https://blog.0j.pw/post/71cfdc59/">
   <!-- 渲染优化 -->
-    <meta http-equiv='x-dns-prefetch-control' content='on' />
-      <link rel='dns-prefetch' href='https://unpkg.com'>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+      <link rel="dns-prefetch" href="https://unpkg.com">
       <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <meta name="renderer" content="webkit">
   <meta name="force-rendering" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
-  <meta name="HandheldFriendly" content="True" >
+  <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
@@ -27,29 +27,29 @@
   <!-- Custom Files headBegin end-->
   <!-- front-matter head_begin begin -->
   <!-- front-matter head_begin end -->
-    <link rel="shortcut icon" type='image/x-icon' href="https://s1.ax1x.com/2022/05/13/OrZZee.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="https://s1.ax1x.com/2022/05/13/OrZZee.jpg">
   <link rel="preload" href="/css/style.css" as="style">
   <link rel="preload" href="/font/LXGWWenKaiGBScreen.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/font/LXGWWenKaiGBScreen.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Linux/Windows系统禁用临时IPv6 - 零焦.能量-一个嵌入式工程师的折腾日记！</title>
-  <meta name="keywords" content="IPv6,System,嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux">
+  <title>STC89C52调试笔记 - 零焦.能量-一个嵌入式工程师的折腾日记！</title>
+  <meta name="keywords" content="STC89C,Serial,嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux">
   <meta desc name="description" content="零焦能量 - HWE_Yoko - 零焦.能量-一个嵌入式工程师的折腾日记！">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux&#x2F;Windows系统禁用临时IPv6">
-<meta property="og:url" content="https://blog.0j.pw/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/">
+<meta property="og:title" content="STC89C52调试笔记">
+<meta property="og:url" content="https://blog.0j.pw/post/71cfdc59/">
 <meta property="og:site_name" content="零焦.能量-一个嵌入式工程师的折腾日记！">
-<meta property="og:description" content="前言 我住的地方的宽带是联通套餐带的500M&#x2F;50M的宽带，原生支持动态公网IPv6，所以可以做远程访问之类用，但是Linux和Windows会同时获取多个IPv6地址，导致做IPv6的DDNS的时候不是很方便，所以需要把临时IPv6禁用掉。 下面介绍一下方法：  Linux方法： 禁用： 在终端中输入命令sudo sysctl -a | grep tempaddr并回车，返回如下结果： 1234">
+<meta property="og:description" content="出于一些特殊原因（帮学弟做个课设），需要用到STC89C52，用都用到了，记录一下过程吧。 串口 &#x2F;* UART STC89C52RC Frequency 11.0592MHz * receive data and tranfer them back * Created:   Thursday May 26, 2022 * Processor: STC89C52RC * Compiler:  Ke">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-03-09T14:28:14.000Z">
-<meta property="article:modified_time" content="2023-05-31T15:48:07.223Z">
+<meta property="article:published_time" content="2022-05-26T15:30:00.000Z">
+<meta property="article:modified_time" content="2022-05-26T15:30:00.000Z">
 <meta property="article:author" content="HWE_Yoko">
-<meta property="article:tag" content="IPv6">
-<meta property="article:tag" content="System">
+<meta property="article:tag" content="STC89C">
+<meta property="article:tag" content="Serial">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -1893,9 +1893,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
-        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br>
+        <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
 </noscript>
 
@@ -1910,10 +1910,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1685548148278),
+    lastupdate: new Date(1685552252947),
     sidebar: {
-      for_page: ["blogger","category","tagcloud","webinfo"],
-      for_post: ["toc"],
+      for_page: ["blogger","tagcloud","webinfo"],
+      for_post: ["blogger","toc"],
       webinfo: {
         lastupd: {
           enable: true,
@@ -2338,25 +2338,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin end-->
     <!-- front-matter body_begin begin -->
     <!-- front-matter body_begin end -->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
-  <div class='container'>
-  <div id='wrapper'>
-    <div class='nav-sub'>
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style="opacity: 0">
+  <div class="container">
+  <div id="wrapper">
+    <div class="nav-sub">
       <p class="title"></p>
-      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
-        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+      <ul class="switcher nav-list-h m-phone" id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self" href="/" onclick="return false;" title="comment"></a></li>
         
-          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self" href="/" onclick="return false;" title="toc"></a></li>
         
       </ul>
     </div>
 		<div class="nav-main">
       
         
-        <a class="title flat-box" target="_self" href='/'>
+        <a class="title flat-box" target="_self" href="/">
           
           
-            <i class='https://s1.ax1x.com/2022/05/13/OrZZee.jpg'></i>
+            <i class="https://s1.ax1x.com/2022/05/13/OrZZee.jpg"></i>
           
           
             零焦.能量
@@ -2364,22 +2364,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         </a>
       
 
-			<div class='menu navigation'>
-				<ul class='nav-list-h m-pc'>
+			<div class="menu navigation">
+				<ul class="nav-list-h m-pc">
           
           
           
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="主页"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-home fa-fw'></i>主页
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="主页" active-action="action-home">
+                  <i class="fa-solid fa-home fa-fw"></i>主页
                 </a>
                 
               </li>
@@ -2389,14 +2383,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2406,14 +2394,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="好友"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>好友
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="好友" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>好友
                 </a>
                 
               </li>
@@ -2423,14 +2405,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2443,12 +2419,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div class="m_search">
         <form name="searchform" class="form u-search-form">
           <i class="icon fa-solid fa-search fa-fw"></i>
-          <input type="text" class="input u-search-input" placeholder="Search..." />
+          <input type="text" class="input u-search-input" placeholder="Search...">
         </form>
       </div>
       
 
-			<ul class='switcher nav-list-h m-phone'>
+			<ul class="switcher nav-list-h m-phone">
 				
 					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
 				
@@ -2459,14 +2435,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/" title="主页"
-                  
-                  
-                  
-                    active-action="action-home"
-                  >
-                  <i class='fa-solid fa-home fa-fw'></i>主页
+                <a class="menuitem flat-box faa-parent animated-hover" href="/" title="主页" active-action="action-home">
+                  <i class="fa-solid fa-home fa-fw"></i>主页
                 </a>
                 
               </li>
@@ -2476,14 +2446,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/archives/" title="归档"
-                  
-                  
-                  
-                    active-action="action-archives"
-                  >
-                  <i class='fa-solid fa-archive fa-fw'></i>归档
+                <a class="menuitem flat-box faa-parent animated-hover" href="/archives/" title="归档" active-action="action-archives">
+                  <i class="fa-solid fa-archive fa-fw"></i>归档
                 </a>
                 
               </li>
@@ -2493,14 +2457,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="好友"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>好友
+                <a class="menuitem flat-box faa-parent animated-hover" href="/friends/" title="好友" active-action="action-friends">
+                  <i class="fa-solid fa-link fa-fw"></i>好友
                 </a>
                 
               </li>
@@ -2510,14 +2468,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/about/" title="关于"
-                  
-                  
-                  
-                    active-action="action-about"
-                  >
-                  <i class='fa-solid fa-info-circle fa-fw'></i>关于
+                <a class="menuitem flat-box faa-parent animated-hover" href="/about/" title="关于" active-action="action-about">
+                  <i class="fa-solid fa-info-circle fa-fw"></i>关于
                 </a>
                 
               </li>
@@ -2541,12 +2493,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post dock' style="display: none;">
+      <div id="none" class="cover-wrapper post dock" style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
+  <div class="cover-bg lazyload placeholder" data-bg="https://gcore.jsdelivr.net/gh/MHG-LAB/cron@gh-pages/bing/bing.jpg"></div>
 
-<div class='cover-body'>
-  <div class='top'>
+<div class="cover-body">
+  <div class="top">
     
     
       <p class="title">零焦.能量</p>
@@ -2555,37 +2507,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <p class="subtitle">一个嵌入式工程师的折腾日记</p>
     
   </div>
-  <div class='bottom'>
-    <div class='menu navigation'>
-      <div class='list-h'>
+  <div class="bottom">
+    <div class="menu navigation">
+      <div class="list-h">
         
           
-            <a href="/"
-              
-              
-              active-action="action-home">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1faa9.svg'><p>主页</p>
+            <a href="/" active-action="action-home">
+              <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1faa9.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1faa9.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><p>主页</p>
             </a>
           
-            <a href="/archives/"
-              
-              
-              active-action="action-archives">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg'><p>归档</p>
+            <a href="/archives/" active-action="action-archives">
+              <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f5c3.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><p>归档</p>
             </a>
           
-            <a href="/friends/"
-              
-              
-              active-action="action-friends">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f46c.svg'><p>好友</p>
+            <a href="/friends/" active-action="action-friends">
+              <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f46c.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1f46c.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><p>好友</p>
             </a>
           
-            <a href="/about/"
-              
-              
-              active-action="action-about">
-              <img src='https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1faaa.svg'><p>关于</p>
+            <a href="/about/" active-action="action-about">
+              <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1faaa.svg" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/twemoji/assets/svg/1faaa.svg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><p>关于</p>
             </a>
           
         
@@ -2603,9 +2543,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="safearea">
         <div class="body-wrapper">
           
-<div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://blog.0j.pw/2023/03/09/Linux禁用临时IPv6/">
+<div id="l_main" class>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://blog.0j.pw/post/71cfdc59/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="零焦.能量-一个嵌入式工程师的折腾日记！">
   </span>
@@ -2626,14 +2566,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Linux/Windows系统禁用临时IPv6
+        STC89C52调试笔记
       </h1>
-      <div class='new-meta-box'>
+      <div class="new-meta-box">
         
           
             
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="" rel="nofollow">
+<div class="new-meta-item author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class="author" href="/" rel="nofollow">
     <img itemprop="image" src="https://s1.ax1x.com/2022/05/13/OrZZee.jpg" class="lazyload" data-srcset="https://s1.ax1x.com/2022/05/13/OrZZee.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">HWE-Yoko</p>
   </a>
@@ -2642,10 +2582,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-03-09T22:28:14+08:00">
-  <a class='notlink'>
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-26T23:30:00+08:00">
+  <a class="notlink">
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2023年3月9日</p>
+    <p>发布于：2022年5月26日</p>
   </a>
 </div>
 
@@ -2654,15 +2594,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
   <div class="new-meta-item wordcount">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：291 字</p>
+      <p>字数：1.3k 字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
-    <a class='notlink'>
+    <a class="notlink">
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：1 分钟</p>
+      <p>时长：5 分钟</p>
     </a>
   </div>
 
@@ -2686,30 +2626,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1>前言</h1>
-<p>我住的地方的宽带是联通套餐带的500M/50M的宽带，原生支持动态公网IPv6，所以可以做远程访问之类用，但是Linux和Windows会同时获取多个IPv6地址，导致做IPv6的DDNS的时候不是很方便，所以需要把临时IPv6禁用掉。<br>
-下面介绍一下方法：</p>
-<hr>
-<h1>Linux方法：</h1>
-<h2 id="禁用：">禁用：</h2>
-<p>在终端中输入命令<code>sudo sysctl -a | grep tempaddr</code>并回车，返回如下结果：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">net.ipv6.conf.all.use_tempaddr = 0</span><br><span class="line">net.ipv6.conf.default.use_tempaddr = 0</span><br><span class="line">net.ipv6.conf.eth0.use_tempaddr = 0</span><br><span class="line">net.ipv6.conf.lo.use_tempaddr = -1</span><br><span class="line">net.ipv6.conf.wlan0.use_tempaddr = 0</span><br></pre></td></tr></table></figure>
-<p>查看项目<code>net.ipv6.conf.all.use_tempaddr</code>的结果，如果等于2，直接修改<code>/etc/sysctl.d/10-ipv6-privacy.conf</code>里的<code>net.ipv6.conf.all.use_tempaddr</code>，使其等于0，之后重启网卡/主机。</p>
-<h2 id="恢复：">恢复：</h2>
-<p>修改<code>/etc/sysctl.d/10-ipv6-privacy.conf</code>里的<code>net.ipv6.conf.all.use_tempaddr</code>，使其等于2，之后重启网卡/主机。</p>
-<hr>
-<h1>Windows:</h1>
-<h2 id="禁用：-v2">禁用：</h2>
-<p>以管理员权限打开Terminal/Powershell，输入以下命令并回车确定，之后重启网卡或者直接重启电脑就好了。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface ipv6 set privacy state=disable</span><br></pre></td></tr></table></figure>
-<h2 id="恢复：-v2">恢复：</h2>
-<p>把禁用命令的<code>disable</code>改为<code>enable</code>，其余同禁用操作。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh interface ipv6 set privacy state=enable</span><br></pre></td></tr></table></figure>
+    <p>出于一些特殊原因（帮学弟做个课设），需要用到STC89C52，用都用到了，记录一下过程吧。</p>
+<h3 id="串口">串口</h3>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/* UART STC89C52RC Frequency 11.0592MHz</span></span><br><span class="line"><span class="comment"> * receive data and tranfer them back</span></span><br><span class="line"><span class="comment"> * Created:   Thursday May 26, 2022</span></span><br><span class="line"><span class="comment"> * Processor: STC89C52RC</span></span><br><span class="line"><span class="comment"> * Compiler:  Keil μVision5</span></span><br><span class="line"><span class="comment"> * Version:   v1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;reg52.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 类型重定义，便于移植</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">char</span> <span class="type">uint8_t</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">int</span> <span class="type">uint16_t</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义串口接收标志枚举类型</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    BufEmpty = <span class="number">0</span>, <span class="comment">// 接收缓冲区为空</span></span><br><span class="line">    BufOverflow,  <span class="comment">// 接收缓冲区溢出</span></span><br><span class="line">    BufReady,     <span class="comment">// 成功接收到结束标志符</span></span><br><span class="line">    WaitInput</span><br><span class="line">&#125; Buf_Flag; <span class="comment">// 串口接收标志</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> BufSize 32 <span class="comment">// 定义接收缓冲区大小为 32字节</span></span></span><br><span class="line"><span class="comment">// 定义结束符为回车符 &quot;\r(回车符)+\n(换行符)&quot;</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> R_SYM <span class="string">&#x27;\r&#x27;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N_SYM <span class="string">&#x27;\n&#x27;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 外部可见函数声明</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">uart_P3_init</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">uart_init</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">send_char</span><span class="params">(<span class="type">uint8_t</span> ch)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">send_string</span><span class="params">(<span class="type">uint8_t</span> *str)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">delay</span><span class="params">(<span class="type">uint16_t</span> i)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义串口接收缓冲区</span></span><br><span class="line"><span class="type">uint8_t</span> RXD_Buf[BufSize] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* main 主函数*/</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">uint8_t</span> i = <span class="number">0</span>;</span><br><span class="line">    Buf_Flag = BufEmpty;                          <span class="comment">//接收缓冲区标志赋初值</span></span><br><span class="line">    uart_P3_init();                               <span class="comment">//初始化P3口</span></span><br><span class="line">    uart_init();                                  <span class="comment">//初始化串口</span></span><br><span class="line">    ES = <span class="number">0</span>;                                       <span class="comment">//发送前关闭串口中断，以防发送完每个字符都没必要地进入中断程序</span></span><br><span class="line">    send_string(<span class="string">&quot;I am AT89C51 Serial COM1!\r\n&quot;</span>); <span class="comment">//发送字符串</span></span><br><span class="line">    ES = <span class="number">1</span>;                                       <span class="comment">//发送完打开串口中断</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (Buf_Flag == BufEmpty) <span class="comment">//如果还没有收到COM2的数据，发送请求输入提示</span></span><br><span class="line">        &#123;</span><br><span class="line">            ES = <span class="number">0</span>; <span class="comment">//发送前关闭串口中断，以防发送完每个字符都没必要地进入中断程序</span></span><br><span class="line">            send_string(<span class="string">&quot;\r\nPlease input form Serial Assistant(&lt;32Bytes)!\r\n&quot;</span>);</span><br><span class="line">            ES = <span class="number">1</span>;               <span class="comment">//发送完打开串口中断</span></span><br><span class="line">            Buf_Flag = WaitInput; <span class="comment">//请求输入提示只发送一次</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (Buf_Flag == BufReady) <span class="comment">//如果收到并存入了RXD_Buf中</span></span><br><span class="line">        &#123;</span><br><span class="line">            ES = <span class="number">0</span>;                      <span class="comment">//发送前关闭串口中断</span></span><br><span class="line">            send_string(<span class="string">&quot;Your Input: &quot;</span>); <span class="comment">//提示你刚才输入了什么</span></span><br><span class="line">            send_string(RXD_Buf);        <span class="comment">// 把接收到的字符串发送回去</span></span><br><span class="line">            i = <span class="number">0</span>;                       <span class="comment">// i计数清零</span></span><br><span class="line">            <span class="keyword">while</span> (i &lt; BufSize)          <span class="comment">//接收缓冲区清零</span></span><br><span class="line">            &#123;</span><br><span class="line">                RXD_Buf[i++] = <span class="number">0</span>; <span class="comment">//清零RXD_Buf</span></span><br><span class="line">            &#125;</span><br><span class="line">            Buf_Flag = BufEmpty; <span class="comment">//串口接收标志:空</span></span><br><span class="line">            ES = <span class="number">1</span>;              <span class="comment">//处理完打开串口中断</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (Buf_Flag == BufOverflow)</span><br><span class="line">        &#123;</span><br><span class="line">            ES = <span class="number">0</span>;                                    <span class="comment">//发送前关闭串口中断</span></span><br><span class="line">            send_string(<span class="string">&quot;ERROR:RXD_Buf is full!\r\n&quot;</span>); <span class="comment">// 提示缓冲区溢出</span></span><br><span class="line">            delay(<span class="number">2000</span>);                               <span class="comment">//按需忽略之后再从COM2输入的内容</span></span><br><span class="line">            i = <span class="number">0</span>;                                     <span class="comment">// i计数清零</span></span><br><span class="line">            <span class="keyword">while</span> (i &lt; BufSize)                        <span class="comment">//接收缓冲区清零</span></span><br><span class="line">            &#123;</span><br><span class="line">                RXD_Buf[i++] = <span class="number">0</span>; <span class="comment">//清零RXD_Buf</span></span><br><span class="line">            &#125;</span><br><span class="line">            Buf_Flag = BufEmpty; <span class="comment">//串口接收标志:空</span></span><br><span class="line">            ES = <span class="number">1</span>;              <span class="comment">//处理完打开串口中断</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 延时函数  */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">delay</span><span class="params">(<span class="type">uint16_t</span> i)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">uint8_t</span> j;</span><br><span class="line">    <span class="keyword">for</span> (; i &gt; <span class="number">0</span>; i--)</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">125</span>; j++)</span><br><span class="line">            ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 串口参数配置函数，这里配置为9600波特率，1位停止位，8位数据位，无校验  */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">uart_init</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    TMOD = <span class="number">0x20</span>; <span class="comment">// Timer1以定时模式工作在方式2：8位常数自动装入定时器/计数器</span></span><br><span class="line">    SCON = <span class="number">0x40</span>; <span class="comment">// SM0=0,SM1=1=1，方式1，10位UART &quot;0 D0~D7 1&quot;，波特率可变</span></span><br><span class="line">    REN = <span class="number">1</span>;     <span class="comment">//允许串口接收数据位</span></span><br><span class="line">    TH1 = <span class="number">0xFD</span>;  <span class="comment">// 9600波特率：晶振的频率/（12*（256-初值))=波特率*32</span></span><br><span class="line">    TL1 = <span class="number">0xFD</span>;  <span class="comment">//方式2的TH1,TL1是相等的，TL1自动重装TH1初值</span></span><br><span class="line">    PCON = <span class="number">0x00</span>; <span class="comment">// SMOD=0波特率不加倍</span></span><br><span class="line">    IE = <span class="number">0x90</span>;   <span class="comment">//允许总中断,允许串口中断,禁止其他中断</span></span><br><span class="line">    PS = <span class="number">0</span>;      <span class="comment">//设置串行口中断优先级</span></span><br><span class="line">    TR1 = <span class="number">1</span>;     <span class="comment">//当GATE=0，TR1置“1” 启动定时器1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* P3串口初始化函数  */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">uart_P3_init</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    P3 = <span class="number">0x0F</span>; <span class="comment">// P3.0 P3.1用作串口的RXD和TXD</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* send_char函数， ch为待发送的字符 */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">send_char</span><span class="params">(<span class="type">uint8_t</span> ch)</span></span><br><span class="line">&#123;</span><br><span class="line">    SBUF = ch; <span class="comment">// SBUF是指串行口同地址的两个缓冲寄存器，一个是发送寄存器，一个是接收寄存器，</span></span><br><span class="line">    <span class="keyword">while</span> (!TI)</span><br><span class="line">        ;   <span class="comment">//等待一个字符(一帧)发送完毕</span></span><br><span class="line">    TI = <span class="number">0</span>; <span class="comment">// TI软件清零，等待下一次发送后的置位</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* send_string函数， *str为待发送的字符串首元素地址 */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">send_string</span><span class="params">(<span class="type">uint8_t</span> *str)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (*str != <span class="string">&#x27;\0&#x27;</span>) <span class="comment">//字符串里的数据发送不到结尾</span></span><br><span class="line">    &#123;</span><br><span class="line">        send_char(*str); <span class="comment">//调用字符发送函数</span></span><br><span class="line">        str++;           <span class="comment">// 指针指向下一个待发字符</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*串口中断接收数据函数 */</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">uart_interrupt</span><span class="params">(<span class="type">void</span>)</span> interrupt 4</span><br><span class="line"><span class="comment">// 中断默认优先级：0外部中断0 &gt; 1定时/计数器0 &gt; 2外部中断1 &gt; 3定时/计数器1 &gt; 4串行中断；</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">static</span> <span class="type">uint8_t</span> n = <span class="number">0</span>; <span class="comment">//一次性接收输入字符串字符个数计数，静态变量只在编译时赋一次初值</span></span><br><span class="line">    <span class="keyword">if</span> (TI == <span class="number">1</span>)          <span class="comment">//如果是发送进入中断，中断直接返回</span></span><br><span class="line">    &#123;</span><br><span class="line">        TI = <span class="number">0</span>; <span class="comment">// TI清0</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (RI == <span class="number">1</span>) <span class="comment">// RI置位表示一帧数据接收完毕，RI必须用软件清0</span></span><br><span class="line">    &#123;</span><br><span class="line">        RI = <span class="number">0</span>;              <span class="comment">//中断标志位清零</span></span><br><span class="line">        ES = <span class="number">0</span>;              <span class="comment">//关闭串口中断，预防而已，防止下面程序执行时被打断</span></span><br><span class="line">        <span class="keyword">if</span> (n &lt; BufSize - <span class="number">1</span>) <span class="comment">// 接收缓冲区未溢出</span></span><br><span class="line">        &#123;</span><br><span class="line">            RXD_Buf[n++] = SBUF; <span class="comment">//读入的数据依次放入RXD_Buf中</span></span><br><span class="line">            <span class="keyword">if</span> (((RXD_Buf[n - <span class="number">2</span>] == R_SYM) &amp;&amp; (RXD_Buf[n - <span class="number">1</span>] == N_SYM))</span><br><span class="line">             \|| ((RXD_Buf[n - <span class="number">2</span>] == N_SYM) &amp;&amp; (RXD_Buf[n - <span class="number">1</span>] == R_SYM)))</span><br><span class="line">            <span class="comment">// 判断是否接收到结束符（回车 &quot;\r\n&quot;或者&quot;\r\n&quot;）</span></span><br><span class="line">            &#123;</span><br><span class="line">                Buf_Flag = BufReady; <span class="comment">// 成功接收到带结束标志符的一串字符</span></span><br><span class="line">                RXD_Buf[n] = <span class="string">&#x27;\0&#x27;</span>;   <span class="comment">// 在字符串末尾补字符数组(串)结束标识</span></span><br><span class="line">                n = <span class="number">0</span>;               <span class="comment">// n清0</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="comment">// 接收缓冲区溢出</span></span><br><span class="line">        &#123;</span><br><span class="line">            Buf_Flag = BufOverflow; <span class="comment">// 串口接收标志:溢出</span></span><br><span class="line">            n = <span class="number">0</span>;                  <span class="comment">// n清0</span></span><br><span class="line">        &#125;</span><br><span class="line">        ES = <span class="number">1</span>; <span class="comment">//打开串口中断</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
   </div>
   
   
     
-    <div class='footer'>
+    <div class="footer">
        <!-- 参考资料、相关资料等 -->
       
        <!-- 相关文章 -->
@@ -2724,14 +2649,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
 
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
+  <div class="article-meta" id="bottom">
+    <div class="new-meta-box">
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-05-31T23:48:07+08:00">
-  <a class='notlink'>
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-26T23:30:00+08:00">
+  <a class="notlink">
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年5月31日</p>
+    <p>更新于：2022年5月26日</p>
   </a>
 </div>
 
@@ -2740,8 +2665,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/IPv6/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>IPv6</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/System/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>System</p></a></div>
-  <span hidden itemprop="keywords">IPv6 System</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/STC89C/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>STC89C</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Serial/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Serial</p></a></div>
+  <span hidden itemprop="keywords">STC89C Serial</span>
 
 
         
@@ -2752,11 +2677,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="-mob-share-list share-body">
     
       
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.0j.pw/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/&title=Linux/Windows系统禁用临时IPv6 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
-          
-          >
+        <a class="-mob-share-qq" title rel="external nofollow noopener noreferrer" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.0j.pw/post/71cfdc59/&title=STC89C52调试笔记 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary=">
           
             <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2764,11 +2685,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.0j.pw/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/&title=Linux/Windows系统禁用临时IPv6 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
-          
-          >
+        <a class="-mob-share-qzone" title rel="external nofollow noopener noreferrer" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.0j.pw/post/71cfdc59/&title=STC89C52调试笔记 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary=">
           
             <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2776,11 +2693,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.0j.pw/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/&title=Linux/Windows系统禁用临时IPv6 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary="
-          
-          >
+        <a class="-mob-share-weibo" title rel="external nofollow noopener noreferrer" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.0j.pw/post/71cfdc59/&title=STC89C52调试笔记 - 零焦.能量-一个嵌入式工程师的折腾日记！&summary=">
           
             <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
           
@@ -2811,30 +2724,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/03/29/CloudflareDNS%E8%A7%A3%E6%9E%90%E5%9C%B0%E5%9D%80%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>CloudflareDNS解析地址批量删除</p>
-          <p class='content'>所需环境：
+        <a class="prev" href="/post/656b2c9e/">
+          <p class="title"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>大理之行</p>
+          <p class="content">
+下关风，上关花，下关风吹上关花；
+苍山雪，洱海月，洱海月照苍山雪。
 
-Node.js
-cfcli
-Windows Terminal
-
-操作步骤：
-先使用Node.js环境安装cfcli
-
-
-解析地址是纯数字的：
-
-新建一个文本文档，把后缀改为&quo...</p>
+作为一个云南人，并且从小生长在离大理不远的楚雄，硬是到了二十四的年纪上了班才第一次去了大理，跟我的伙伴们一起骑机车去周末之...</p>
         </a>
       
       
-        <a class='next' href='/2022/08/17/Google%E9%82%AE%E7%AE%B1%E5%8F%91%E9%80%81%E5%88%B0163%E3%80%81QQ-%E9%82%AE%E7%AE%B1%E8%A2%AB%E5%B1%8F%E8%94%BD/'>
-          <p class='title'>Google邮箱发送到163、QQ...邮箱被屏蔽<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>08.17
-昨天在用Gmail和客户联系，给我们公司采购抄送邮件的时候发现Gmail无法发送到公司的邮箱，会出现如下邮件回复，并且邮件没有送达相应邮箱。
-
-后又测试了QQ邮箱，163邮箱，也发现...</p>
+        <a class="next" href="/post/3bd97946/">
+          <p class="title">硬件人的第一台示波器<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class="content">今天在Rigol官网下单了一台MSO5072，可以软件破解到MSO5354，4ch、350M、8G、200Mpts，￥5949还送价值￥3999的16ch逻辑探头，爽的一批
+到了之后可能会在B站...</p>
         </a>
       
     </div>
@@ -2854,7 +2757,65 @@ Windows Terminal
 
 
 </div>
-<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+<aside id="l_side" itemscope itemtype="http://schema.org/WPSideBar">
+  
+
+  
+    
+    
+      
+<section class="widget blogger desktop pjax">
+  <div class="content">
+    
+      
+        <a class="avatar flat-box circle" href="/about/">
+          <img no-lazy src="https://s1.ax1x.com/2022/05/13/OrZZee.jpg">
+        </a>
+      
+    
+    
+      <div class="text">
+        
+        
+        
+          <p><span id="jinrishici-sentence">零焦.能量-一个嵌入式工程师的折腾日记！</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/" class="social fa-solid fa-home flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="mailto:HWE.Yoko@gmail.com" class="social fa-solid fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/HWE-Yoko" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://space.bilibili.com/33793123" class="social fab fa-bilibili flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+    
   
 
   
@@ -2871,17 +2832,17 @@ Windows Terminal
   
 
 
-  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+  <section class="widget toc-wrapper desktop mobile " id="toc-div">
     
   <header>
     
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class="name">本文目录</span>
     
   </header>
 
 
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%81%E7%94%A8%EF%BC%9A"><span class="toc-text">禁用：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%EF%BC%9A"><span class="toc-text">恢复：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%81%E7%94%A8%EF%BC%9A-v2"><span class="toc-text">禁用：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%EF%BC%9A-v2"><span class="toc-text">恢复：</span></a></li></ol>
+    <div class="content">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%B2%E5%8F%A3"><span class="toc-text">串口</span></a></li></ol>
     </div>
   </section>
 
@@ -2891,10 +2852,6 @@ Windows Terminal
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
-
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2962,12 +2919,29 @@ Windows Terminal
         </div>
         
   
-  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+  <footer class="footer clearfix" itemscope itemtype="http://schema.org/WPFooter">
     <br><br>
     
       
-        <div class='copyright'>
-        <p><a href="/">Copyright © 2021-2023 Yoko With Volantis</a></p>
+        <br>
+        <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          
+            
+              <a href="https://github.com/HWE-Yoko" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+            
+          
+            
+          
+        </div>
+      
+    
+      
+        <div class="copyright">
+        <p>[Copyright © 2021-2023 Yoko With <a href="https://volantis.js.org/" target="_blank" rel="external nofollow noopener noreferrer">Volantis</a>]</p>
 
         </div>
       
@@ -3479,7 +3453,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","sameAs":["https://github.com/volantis-x"],"description":"零焦能量"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.0j.pw/","name":"零焦.能量-一个嵌入式工程师的折腾日记！"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.0j.pw/2023/03/09/Linux禁用临时IPv6/","name":"Linux/Windows系统禁用临时IPv6"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","keywords":"嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux","description":"零焦能量","author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","description":"零焦能量"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.0j.pw?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Linux/Windows系统禁用临时IPv6","description":"零焦能量","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.0j.pw/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/"},"author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.0j.pw/2023/03/09/Linux%E7%A6%81%E7%94%A8%E4%B8%B4%E6%97%B6IPv6/","wordCount":0,"datePublished":"2023-03-09T14:28:14.000Z","dateModified":"2023-05-31T15:48:07.223Z","keywords":"IPv6,System","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","sameAs":["https://github.com/volantis-x"],"description":"零焦能量"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://blog.0j.pw/","name":"零焦.能量-一个嵌入式工程师的折腾日记！"}},{"@type":"ListItem","position":3,"item":{"@id":"https://blog.0j.pw/post/71cfdc59/","name":"STC89C52调试笔记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","keywords":"嵌入式,硬件,电源,功率,Keil,STM32,DSP,Linux","description":"零焦能量","author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/","description":"零焦能量"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","url":"https://blog.0j.pw/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://blog.0j.pw?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"STC89C52调试笔记","description":"零焦能量","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.0j.pw/post/71cfdc59/"},"author":{"@type":"Person","name":"HWE_Yoko","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://blog.0j.pw/"},"publisher":{"@type":"Organization","name":"零焦.能量-一个嵌入式工程师的折腾日记！","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://blog.0j.pw/post/71cfdc59/","wordCount":0,"datePublished":"2022-05-26T15:30:00.000Z","dateModified":"2022-05-26T15:30:00.000Z","keywords":"STC89C,Serial","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
