@@ -135,7 +135,14 @@
   </url>
   
   <url>
-    <loc>https://blog.0j.pw/tags/NDS/</loc>
+    <loc>https://blog.0j.pw/tags/DNS/</loc>
+    <lastmod>2023-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.0j.pw/tags/%E9%82%AE%E7%AE%B1/</loc>
     <lastmod>2023-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -156,13 +163,6 @@
   </url>
   
   <url>
-    <loc>https://blog.0j.pw/tags/%E9%82%AE%E7%AE%B1/</loc>
-    <lastmod>2023-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.0j.pw/tags/STC89/</loc>
     <lastmod>2023-06-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -171,27 +171,6 @@
   
   <url>
     <loc>https://blog.0j.pw/tags/Serial/</loc>
-    <lastmod>2023-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.0j.pw/tags/%E6%97%85%E6%B8%B8/</loc>
-    <lastmod>2023-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.0j.pw/tags/%E5%A4%A7%E7%90%86/</loc>
-    <lastmod>2023-06-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.0j.pw/tags/%E6%9C%BA%E8%BD%A6/</loc>
     <lastmod>2023-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -213,6 +192,27 @@
   
   <url>
     <loc>https://blog.0j.pw/tags/Hexo/</loc>
+    <lastmod>2023-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.0j.pw/tags/%E6%97%85%E6%B8%B8/</loc>
+    <lastmod>2023-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.0j.pw/tags/%E5%A4%A7%E7%90%86/</loc>
+    <lastmod>2023-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.0j.pw/tags/%E6%9C%BA%E8%BD%A6/</loc>
     <lastmod>2023-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
